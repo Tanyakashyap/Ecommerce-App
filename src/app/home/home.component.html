@@ -1,0 +1,34 @@
+<div class="home">
+    <div class="row mt-4">
+        <div class="col-md-4 mb-2">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="profile-icon m-1">
+                        <img src="assets/images/admin.png" width="100" alt="" />
+                    </div>
+                    <button class="btn btn-dark" (click)="navigateTo('admin')">{{'fields.admin' | translate}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-2">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="profile-icon m-1">
+                        <img src="assets/images/seller.png" width="100" alt="" />
+                    </div>
+                    <button class="btn btn-dark" (click)="navigateTo('seller')">{{'fields.seller' | translate}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="profile-icon m-1">
+                        <img src="assets/images/customer.png" width="100" alt="" />
+                    </div>
+                    <button class="btn btn-dark" (click)="navigateTo('buyer')">{{'fields.buyer' | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

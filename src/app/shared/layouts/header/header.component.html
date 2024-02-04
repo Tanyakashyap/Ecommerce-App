@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">{{'header.ecommerce' | translate}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item" *ngIf="user_role == 'buyer'  && current_url !== '/'">
+                    <a class="nav-link" routerLink="/my-order">{{'header.order' | translate}}</a>
+            </li>
+            <li class="nav-item" *ngIf="user_role == 'seller'  && current_url !== '/'">
+                    <a class="nav-link" routerLink="/seller/product">{{'header.product' | translate}}</a>
+            </li>
+            <li class="nav-item" *ngIf="user_role == 'admin'  && current_url !== '/'">
+                <a class="nav-link" routerLink="/admin/user">{{'header.user' | translate}}</a>
+        </li>
+            <li class="nav-item" *ngIf="user_role == 'admin'  && current_url !== '/'">
+                    <a class="nav-link" routerLink="/admin/product">{{'header.product' | translate}}</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item">
+                <a class="nav-link" routerLink="/sign-in" *ngIf="current_url && current_url.includes('admin' || 'seller' || 'buyer')">{{'header.signin' | translate}}</a>
+            </li> -->
+            <li class="nav-item" *ngIf="!logged_in && current_url == '/'">
+                <a class="nav-link" routerLink="/sign-up">{{'header.signup' | translate}}</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    {{language}}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" (click)="switchLanguage('en')">{{'header.lang_en' | translate}}</a>
+                    <a class="dropdown-item" (click)="switchLanguage('hn')">{{'header.lang_hn' | translate}}</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav" *ngIf="logged_in && current_url !== '/'">
+            <li class="nav-item">
+                <a class="nav-link sim-pointer" routerLink="/my-profile">{{'header.my_profile' | translate}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link sim-pointer" (click)="logOut()">{{'header.signout' | translate}}</a>
+            </li>
+        </ul>
+    </div>
+</nav>
