@@ -3,10 +3,9 @@ Ecommerce portal where some of the user(Seller) who want to sell the product and
 
 # Project Setup
 **Step 1:** clone the project: ``` git clone https://github.com/Tanyakashyap/Ecommerce-App.git ```
+**Step 2:** ``` cd Ecommerce-App ```
 
-**Step 2:** ``` cd angular-ecommerce ```
-
- **Step 3:** ``` git pull origin develop ``` or ``` master ``` 
+ **Step 3:** ``` git pull origin master ``` 
 
 **Step 4:** Install Node form  https://nodejs.org/en/
 
