@@ -3,6 +3,7 @@ Ecommerce portal where some of the user(Seller) who want to sell the product and
 
 # Project Setup
 **Step 1:** clone the project: ``` git clone https://github.com/Tanyakashyap/Ecommerce-App.git ```
+
 **Step 2:** ``` cd Ecommerce-App ```
 
  **Step 3:** ``` git pull origin master ``` 
